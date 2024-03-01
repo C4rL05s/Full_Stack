@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Is it a palindrome?</title>
+</head>
+<body>
+	<h2>Is it a palindrome?</h2>
+	<p>Enter a word to see if it is a palindrome<p>
+	<hr></hr>
+
+	<form id="palin">
+		<input type="text" id="user_input" placeholder="e.g racecar" required>
+		<button type="submit">Submit</button>
+	</form>
+	<div id="answer"></div>
+
+	<script>
+	document.getElementById("palin").addEventListener("submit", function(event){
+			event.preventDefault();
+			var word = document.getElementById("user_input").value;
+			var arr = word.split('');
+
+			var processedRWord = arr.reverse();
+			var rword = processedRWord.join('');
+
+			if (word === rword){
+				document.getElementById("answer").innerHTML = word + " is a palindrome";
+			} else {
+				document.getElementById("answer").innerHTML = word + " is not a palindrome";
+			}
+			
+	
+        	});		
+	</script>
+
+</body>
+</html>
+

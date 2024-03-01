@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Permutations</title>
+</head>
+<body>
+	<h2>Permutations</h2>
+	<p>Enter a number to see how many permutations you can realize.</p>
+	<p>You must input your value at the end of the URL</p>
+	<p>'?value=(your value)'. You do not need to include the '' or ()</p>
+	<hr></hr>
+
+	<!--<form id="perms">
+		<input type="number" id="user_input" placeholder="e.g 10" required>
+		<button type="submit">Submit</button>
+	</form> -->
+	<div id="result"></div>
+
+	<script>
+	
+
+		var urlValue = window.location.search;
+		const urlParams = new URLSearchParams(urlValue);
+		var inputVal = urlParams.get('value');
+		
+		document.getElementById("result").innerHTML = inputVal;
+		var counter = 1; 
+
+			var numVal = parseFloat(inputVal);
+
+			if(!isNaN(numVal)){
+				var formattedVal = numVal.toLocaleString();
+				for (var i = 1; i<= numVal; i++){
+					counter *= i;
+
+				}
+				var answer = counter.toLocaleString();
+				document.getElementById("result").innerHTML = '<p>' + formattedVal + "! is " + answer + '</p>';
+			
+	}	
+		
+	</script>
+
+
+</body>
+</html>

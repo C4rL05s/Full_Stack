@@ -1,0 +1,34 @@
+
+.button-container{
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+.styled-download-btn{
+	padding: 10px 20px;
+	background-color: gray;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+
+
+}
+
+.styled-button a {
+	color: inherit;
+	text-decoration: none;
+
+}
+.styled-link a:hover{
+	color: #0077cc;
+
+}
+
+.styled-download-btn:hover{
+	background-color: #45a049;
+
+}

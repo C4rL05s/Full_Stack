@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Calculator</title>	
+</head>
+<body>
+	<h2>Simple Calculator</h2>
+	<p>This calculator is made with javascript, it will calculate the addition, subtraction, division or multiplication of 2 digits.<p>
+	<hr></hr>
+	<form id="simpCalc">
+		<label for="input">Enter 2 numbers seperated by a comma:</label>
+		<input type="text" id="user_input" placeholder="e.g 34,56" required>
+		<select name="choice" id="choice" required>
+			<option value="add">+</option>
+			<option value="sub">-</option>
+			<option value="mult">*</option>
+			<option value="div">/</option>
+		</select>
+		<button type="submit">Submit</button>
+	</form>
+	<div id="result"></div>
+	
+	<script>
+	document.getElementById("simpCalc").addEventListener("submit", function(event){
+		event.preventDefault();
+		var values = document.getElementById("user_input").value;
+		var choiceOperator = document.getElementById("choice");
+		var operator = choiceOperator.value;
+		var arr = values.split(',');
+		var num1 = parseFloat(arr[0]);
+		var num2 = parseFloat(arr[1]);
+		//document.getElementById("result").innerHTML = "result:" + num1 + num2;
+		switch (operator){
+			
+			case "add":
+				var result = num1 + num2;
+				//alert("Sum:" + result);
+				document.getElementById("result").innerHTML = "sum: " + result;
+				break;
+			case "sub":
+				var result = num1 - num2; 
+				document.getElementById("result").innerHTML = "subtraction: " + result;
+				break;
+			case "mult":
+				var result = num1 * num2; 
+				document.getElementById("result").innerHTML = "Multiplication: " + result;
+				break; 
+			case "div":
+				if (num2 == 0){
+					alert("You are trying to divide by zero");
+				} else {
+					
+					var result = num1 / num2; 
+					document.getElementById("result").innerHTML = "Division: " + result;
+					break;
+				}
+			default: 
+				document.getElementById("result").innerHTML = "You must enter a valid number";
+	
+
+		}
+	
+
+	});
+	</script>
+
+</body>
+
+</html>
