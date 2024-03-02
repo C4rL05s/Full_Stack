@@ -1,34 +1,41 @@
+body{
+	background-color: #d3d3d3;
+	margin: 0
+}
 
-.button-container{
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
+h1{
+text-align: center;
 
 }
 
-.styled-download-btn{
-	padding: 10px 20px;
-	background-color: gray;
-	color: white;
-	border: none;
-	border-radius: 5px;
+.header-tab-bar {
+	background-color: #333;
+
+}
+
+.header-tab-bar ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.header-tab-bar li{
+	padding: 10px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.header-tab-bar a{
+	color: #fff;
+	text-decoration: none;
 	cursor: pointer;
 
 
 }
 
-.styled-button a {
-	color: inherit;
-	text-decoration: none;
-
-}
-.styled-link a:hover{
-	color: #0077cc;
-
+.header-tab-bar a:hover{
+	text-decoration: underline;
 }
 
-.styled-download-btn:hover{
-	background-color: #45a049;
 
-}
